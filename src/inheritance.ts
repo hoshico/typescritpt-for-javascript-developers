@@ -28,3 +28,4 @@ class Lion extends Animal {
 
 console.log(new Animal('Mickey').run());
 console.log(new Lion('Simba', 80).run());
+console.log(new Lion('Simba', 60).run());
