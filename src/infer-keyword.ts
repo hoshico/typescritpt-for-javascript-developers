@@ -8,4 +8,8 @@ console.log(add(1, 2));
 
 type ReturnTypeFromAdd = ReturnType<typeof add>;
 
-type MyReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any;
+type MyReturnType<T extends (...args: any) => any> = T extends (
+  ...args: any
+  ) => infer R 
+    ? R 
+    : any;
