@@ -28,3 +28,23 @@ const Example: Profile = {
 // example1のデータの型を別の型として設定したい時"typeof""
 // typeofの方はexample1の構造の変化にも追従できる
 type Profile2 = typeof example1;
+
+
+// interfaceについて
+
+// typeは型エイリアス(別名)なので
+type ObjectType = {
+  name: string;
+  age: number;
+};
+
+// interfaceは「＝」はいらない
+interface objectInterface {
+  name: string;
+  age: number;
+};
+
+let object: objectInterface = {
+  name: 'Ham-san',
+  age: 43
+};
