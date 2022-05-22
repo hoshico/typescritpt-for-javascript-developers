@@ -67,3 +67,26 @@ let sumAny = numberAny + 10;
 if (typeof numberUnknown === 'number') {
   let sumUnknown = numberUnknown + 10;
 }
+
+// intersection型
+type Pitcher1 = {
+  throwingAverage: number;
+};
+type Batter1 = {
+  battingAverage: number;
+};
+
+const DaimajinSasaki: Pitcher1 = {
+  throwingAverage: 154
+};
+
+const OchiaiHiromitsu: Batter1 = {
+  battingAverage: 0.367
+};
+// 既存の型を組み合わせる
+type TwoWayPlayer = Pitcher1 & Batter1;
+
+const ohtanishouhei: TwoWayPlayer = {
+  throwingAverage: 165,
+  battingAverage: 0.286
+};
