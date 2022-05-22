@@ -48,3 +48,7 @@ let object: objectInterface = {
   name: 'Ham-san',
   age: 43
 };
+
+
+// 型安全
+let isFinsished: boolean = true;
