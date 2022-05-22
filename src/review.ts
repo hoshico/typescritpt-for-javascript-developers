@@ -52,3 +52,18 @@ let object: objectInterface = {
 
 // 型安全
 let isFinsished: boolean = true;
+
+// Unknown
+const kansu = () => {
+  return 43;
+}
+
+let numberAny: any = kansu();
+let numberUnknown: unknown = kansu();
+// typeof 型を取得できる
+// unknownなので数値じゃないかもしれない。計算できないかもしれない。
+// 型ガードのnumberは""で囲う。numberは
+let sumAny = numberAny + 10;
+if (typeof numberUnknown === 'number') {
+  let sumUnknown = numberUnknown + 10;
+}
