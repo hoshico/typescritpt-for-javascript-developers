@@ -90,3 +90,7 @@ const ohtanishouhei: TwoWayPlayer = {
   throwingAverage: 165,
   battingAverage: 0.286
 };
+
+// ユニオン型
+let value: number | string = 1;
+value = 'foo';
