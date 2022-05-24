@@ -104,3 +104,37 @@ dayOfTheWeek = '月';
 let month: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 = 1;
 month = 12;
 
+// enum型(イナム型)
+// keyに月、valueに数字がくること想定
+// イコールで初期化する必要がある
+
+enum Months {
+  January = 1,
+  Feburary,
+  March,
+  April,
+  May,
+  Jun,
+  July,
+  August,
+  September,
+  October,
+  November,
+  December
+}
+
+enum COLORS {
+  RED = '#FF0000',
+  WHITE = '#FFFFFF',
+  GREEN = '#008000',
+  BLUE = '#0000FF',
+  BLACK = '#000000'
+}
+
+let green = COLORS.GREEN;
+console.log({green});
+
+// yellowを追加したい場合
+enum COLORS {
+  YELLOW = '#FFFF00'
+}
