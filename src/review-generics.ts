@@ -16,6 +16,28 @@ const echo = <T>(arg: T): T => {
   使用する際は
   func<具体的な型>()
   の形で使用
+
+  下のようにどの型を引数にとっても同様の型を返す
+  関数ができる
 */
 console.log(echo<number>(100));
 console.log(echo<string>('Hello'));
+console.log(echo<boolean>(true));
+
+
+
+/* 
+  クラスを使用したver
+  class クラス名<型引数> {}
+  ・constructorの引数にもTを使用
+*/
+class Mirror<T> {
+  constructor(public value: T) {}
+
+  echo(): T {
+    return this.value;
+  }
+};
+
+console.log(new Mirror<number>(123).echo());
+
